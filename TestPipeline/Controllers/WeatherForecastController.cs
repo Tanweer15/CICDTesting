@@ -31,7 +31,7 @@ namespace TestPipeline.Controllers
         [HttpGet]
         public string Get()
         {
-            return "Tanweer";
+            return "Tanweer2";
         }
 
         [HttpGet]
