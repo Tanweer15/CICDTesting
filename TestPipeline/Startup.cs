@@ -36,7 +36,7 @@ namespace TestPipeline
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+           
 
             app.UseRouting();
 
