@@ -12,7 +12,7 @@ namespace XUnitTestProject1
         public void Test1()
         {
             var returnValue = weatherct.Get();
-            Assert.Equal("Tanweer", returnValue);
+            Assert.Equal("Tanweer11", returnValue);
         }
        
     }
