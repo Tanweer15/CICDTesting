@@ -31,7 +31,12 @@ steps:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
     failTaskOnFailedTests: true
-    
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit, cTest
+    testResultsFiles: 'testresults/TEST-*.xml'
+    searchFolder: '$(testFilesFolder)'
+    failTaskOnFailedTests: true
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
