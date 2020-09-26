@@ -21,6 +21,12 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'XUnit'
+    testResultsFiles: 'testresults/TEST-*.xml'
+    searchFolder: '$(system.defaultworkingdirectory)/acceptancetest/testfolder'
+    failTaskOnFailedTests: true
 - task: DotNetCoreCLI@2
   inputs:
     command: test
